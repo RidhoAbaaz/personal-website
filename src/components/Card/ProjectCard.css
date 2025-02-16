@@ -1,0 +1,16 @@
+.card-project-wrapper {
+    padding: 30px;
+    display: flex;
+    width: max-content;
+    background: rgba(255, 255, 255, 0.1); /* Warna semi-transparan */
+    backdrop-filter: blur(10px); /* Efek blur */
+    -webkit-backdrop-filter: blur(10px); /* Untuk dukungan Safari */
+    border-radius: 10px;
+    gap: 10px;
+    flex-direction: column;
+}
+
+.image-porto {
+    height: 210px;
+    width: 380px;
+}

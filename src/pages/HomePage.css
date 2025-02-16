@@ -1,0 +1,60 @@
+.homepage {
+    height: 100vh; 
+    border: 2px solid white;
+    background-color: #092635;
+}
+
+.wrapper-1 {
+    padding: 40px;
+    gap: 30%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.logo {
+    font-size: 25px;
+    font-weight: 700;
+}
+
+.wrapper-2 {
+    margin-top: 11%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.text-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+    margin-left: 30%;
+}
+
+.name-info {
+    font-size: 50px;
+}
+
+.job-info {
+    font-size: 80px;
+    margin-bottom: 25px;
+}
+
+.icon-wrapper {
+    margin-top: -5px;
+    background-color: #5C8374;
+    border-radius: 20px;
+    padding: 20px;
+    height: 230px;
+}
+
+.icon-wrapper ul {
+    list-style-type: none;
+    display: flex;
+    flex-direction: column;
+    gap: 35px;
+}
+
+.icon-wrapper ul li {
+    font-size: 35px;
+}

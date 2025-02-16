@@ -1,0 +1,20 @@
+.navbar-list {
+    list-style-type: none;
+    display: flex;
+    gap: 35px;
+}
+
+.navbar-list a {
+    display: inline-block;
+    text-decoration: none;
+    text-align: center;
+    padding: 10px;
+    height: 40px;
+    width: 100px;
+    border-radius: 10px;
+}
+
+.navbar-list a:hover {
+    background-color: #5c8374;
+    transition: 1s;
+}

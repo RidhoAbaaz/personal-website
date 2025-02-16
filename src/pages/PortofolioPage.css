@@ -1,0 +1,19 @@
+.portofoliopage {
+    background-color: #092635;
+    height: 100vh;
+    padding: 100px 0 0 150px;
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+}
+
+.portofolio-nav {
+    list-style-type: none;
+    display: flex;
+    justify-content: center;
+    gap: 100px;
+}
+
+.portofolio-nav a{
+    text-decoration: none;
+}

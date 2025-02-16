@@ -1,0 +1,8 @@
+.card-wrapper {
+    display: flex;
+    gap: 10px;
+}
+
+.card-wrapper p {
+    text-align: justify;
+}

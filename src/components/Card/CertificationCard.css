@@ -1,0 +1,19 @@
+.certification-card {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: max-content;
+    align-items: center;
+}
+
+.certification-card img {
+    width: 450px;
+    height: 300px;
+}
+
+.certification-card button {
+    width: 150px;
+    height: 40px;
+    background-color: transparent;
+    border: 2px solid white;
+}

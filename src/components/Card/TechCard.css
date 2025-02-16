@@ -1,0 +1,12 @@
+.tech-card {
+    border-radius: 10px;
+    background: rgba(255, 255, 255, 0.1);
+    padding: 30px;
+    width: max-content;
+}
+
+.tech-card img {
+    background: none;
+    height: 130px;
+    width: 100px;
+}
