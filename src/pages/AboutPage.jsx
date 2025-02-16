@@ -1,10 +1,13 @@
+import { useContext } from "react";
 import Navigator from "../components/Navigator/Navigator";
 import Title from "../components/Title/Title";
 import './AboutPage.css'
+import { NavigationContext } from "../contexts/NavigationContext";
 
 export default function AboutPage() {
+    const { about } = useContext(NavigationContext);
     return (
-        <section className="aboutpage">
+        <section className="aboutpage" ref={about}>
             <div className="about-wrapper">
                 <Title text="About Me" width="170px"/>
                 <div className="content-wrapper">

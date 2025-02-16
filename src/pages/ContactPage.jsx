@@ -1,11 +1,14 @@
+import { useContext } from 'react'
 import Button from '../components/Button/Button'
 import ContactCard from '../components/Card/ContactCard'
 import Title from '../components/Title/Title'
 import './ContactPage.css'
+import { NavigationContext } from '../contexts/NavigationContext'
 
 export default function ContactPage() {
+    const { contact } = useContext(NavigationContext);
     return (
-        <div className='contactpage'>
+        <section className='contactpage' ref={contact}>
             <Title text="Get In Touch" width="223px"/>
             <p>I am open to discussions, collaborations, or career opportunities in the tech field. Feel free to connect with me via email or social media. I look forward to engaging with like minded professionals and exploring exciting opportunities together!</p>
                 <div className="feedback-content">
@@ -39,6 +42,6 @@ export default function ContactPage() {
                         </div>
                     </div>
                 </div>
-        </div>
+        </section>
     )
 }

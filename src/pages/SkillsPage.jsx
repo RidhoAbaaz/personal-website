@@ -2,10 +2,13 @@ import Title from "../components/Title/Title";
 import Navigator from "../components/Navigator/Navigator";
 import './SkillsPage.css'
 import Skill from "../components/Skill/Skill";
+import { useContext } from "react";
+import { NavigationContext } from "../contexts/NavigationContext";
 
 export default function SkillsPage() {
+    const { skill } = useContext(NavigationContext);
     return (
-        <section className="skillpage">
+        <section className="skillpage" ref={skill}>
             <div className="skills-wrapper">
                 <Title text="My Skills" width="162px"/>
                 <p>FROM MY JOURNEY AS INFORMATICS STUDENT I HAVE KIND OF SKILLS</p>

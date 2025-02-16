@@ -1,12 +1,15 @@
 // import CertificationCard from '../components/Card/CertificationCard'
+import { useContext } from 'react'
 import TechCard from '../components/Card/TechCard'
 import Title from '../components/Title/Title'
 import './PortofolioPage.css'
+import { NavigationContext } from '../contexts/NavigationContext'
 // import ProjectCard from '../components/Card/ProjectCard'
 
 export default function PortofolioPage() {
+    const { portofolio } = useContext(NavigationContext);
     return (
-        <div className="portofoliopage">
+        <div className="portofoliopage" ref={portofolio}>
             <Title text="Portofolio" width="180px" />
             <nav>
                 <ul className='portofolio-nav'>
