@@ -1,13 +1,11 @@
 .aboutpage {
     background-color: #092635;
-    height: 100vh;
-}
-
-.about-wrapper {
     padding: 100px 0 0 150px;
     display: flex;
     flex-direction: column;
     gap: 50px;
+    border: 2px solid white;
+    height: 100vh;
 }
 
 .content-wrapper {
@@ -16,20 +14,21 @@
     gap: 150px;
 }
 
-.frame {
-    background-color: #1B4242;
-    padding: 20px;
-    border-radius: 15px;
-    width: max-content;
+.img {
+    height: 250px;
+    border-radius: 50%;
     box-shadow: 0 0 20px 2px black;
 }
 
-.img {
-    height: 300px;
+.description-text {
+    font-size: 18px;
+    word-wrap: break-word;
+    text-align: justify;
 }
 
-.description-text {
-    font-size: 20px;
-    width: 40%;
-    text-align: justify;
+.content {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
 }

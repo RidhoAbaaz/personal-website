@@ -5,16 +5,18 @@
 }
 
 .navbar-list a {
+    cursor: default;
     display: inline-block;
     text-decoration: none;
     text-align: center;
     padding: 10px;
     height: 40px;
-    width: 100px;
+    width: 110px;
     border-radius: 10px;
+    transition: font-size 1s;
 }
 
 .navbar-list a:hover {
-    background-color: #5c8374;
-    transition: 1s;
+    color: #5C8374;
+    font-size: 20px;
 }

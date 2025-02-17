@@ -1,5 +1,4 @@
 import Title from "../components/Title/Title";
-import Navigator from "../components/Navigator/Navigator";
 import './SkillsPage.css'
 import Skill from "../components/Skill/Skill";
 import { useContext } from "react";
@@ -33,7 +32,6 @@ export default function SkillsPage() {
                         <Skill text="Javascript" />
                         <Skill text="React" />
                     </div>
-                    <Navigator />
                 </div>
             </div>
         </section>

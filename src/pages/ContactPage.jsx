@@ -36,9 +36,9 @@ export default function ContactPage() {
                     <div className="link-connect">
                         <h3>Lets Connect</h3>
                         <div className="icon">
-                            <a href=""><i className="bi bi-instagram"></i></a>
-                            <a href=""><i className="bi bi-linkedin"></i></a>
-                            <a href=""><i className="bi bi-github"></i></a>
+                            <a href="https://www.instagram.com/ridhoabdull_/" target='_blank'><i className="bi bi-instagram"></i></a>
+                            <a href="https://www.linkedin.com/in/ridho-abdul-aziz-509b43303/" target="_blank"><i className="bi bi-linkedin"></i></a>
+                            <a href="https://github.com/RidhoAbaaz/" target="_blank"><i className="bi bi-github"></i></a>
                         </div>
                     </div>
                 </div>

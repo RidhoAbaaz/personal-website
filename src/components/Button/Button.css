@@ -1,12 +1,26 @@
 .button {
+    z-index: 1;
     height: 50px;
     width: 120px;
     border: 2px solid #5c8374;
-    border-radius: 25px;
     background-color: transparent;
+    position: relative;
+    cursor: pointer;
 }
 
-.button:hover {
+.button:hover::before {
     background-color: #5c8374;
-    transition: 1s;
+    width: 120px;
+}
+
+.button::before {
+    content: "";
+    z-index: -1;
+    left: 0;
+    top: 0;
+    height: 50px;
+    width: 0;
+    position: absolute;
+    background: #5c8374;
+    transition: width 1s;
 }

@@ -5,7 +5,8 @@ import './HomePage.css'
 import { NavigationContext } from "../contexts/NavigationContext";
 
 export default function HomePage() {
-    const { home, about, skill, portofolio, contact } = useContext(NavigationContext)
+    const { home, about, skill, portofolio, contact } = useContext(NavigationContext);
+
     return (
         <section className="homepage" ref={home}>
             <div className="wrapper-1">
@@ -16,7 +17,14 @@ export default function HomePage() {
                 <div className="text-wrapper">
                     <p className="name-info">I am Ridho Abdul Aziz</p>
                     <p className="job-info">Informatic Student</p>
-                    <Button text="Contact Me" />
+                    <div className="button-wrap">
+                        <Button text="Contact Me" page={contact}>
+                            <i className="bi bi-person-lines-fill"></i>
+                        </Button>
+                        <Button text="Portofolio" page={portofolio}>
+                            <i className="bi bi-code"></i>
+                        </Button>
+                    </div>
                 </div>
                 <div className="icon-wrapper">
                     <ul>

@@ -4,6 +4,11 @@
     background-color: #092635;
 }
 
+.button-wrap {
+    display: flex;
+    gap: 20px;
+}
+
 .wrapper-1 {
     padding: 40px;
     gap: 30%;

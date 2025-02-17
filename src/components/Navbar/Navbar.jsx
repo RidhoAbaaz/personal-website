@@ -2,9 +2,7 @@ import './Navbar.css'
 
 export default function Navbar({ homePage, aboutPage, skillPage, portofolioPage, contactPage }) {
 
-    const handleCLick = (page) => {
-        page.current.scrollIntoView({ behavior: "smooth" });
-    }
+    const handleCLick = (page) => page.current.scrollIntoView({ behavior: "smooth" });
 
     return (
         <nav>
