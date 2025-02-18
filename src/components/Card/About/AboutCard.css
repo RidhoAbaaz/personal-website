@@ -1,0 +1,42 @@
+.aboutcard {
+    display: flex;
+    justify-content: space-between;
+    border: 2px solid white;
+    width: max-content;
+    padding: 20px;
+    width: 20%;
+    gap: 50px;
+}
+
+.aboutcard p {
+    font-size: 30px;
+}
+
+.card-content {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.card-content i {
+    font-size: 30px;
+}
+
+.card-content h5 {
+    font-size: 20px;
+}
+
+.about-text-wrap {
+    display: flex;
+    gap: 50px;
+}
+
+.about-text-wrap i {
+    font-size: 10px;
+}
+
+.card-content a {
+    cursor: pointer;
+    font-size: 10px;
+    text-decoration: none;
+}

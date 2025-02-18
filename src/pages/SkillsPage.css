@@ -1,10 +1,7 @@
 .skillpage {
     height: 100vh;
     background-color: #092635;
-}
-
-.skills-wrapper {
-    padding: 100px 0 0 150px;
+    padding: 70px 0 0 150px;
     display: flex;
     flex-direction: column;
     gap: 30px;
@@ -15,25 +12,16 @@
     text-align: center;
 }
 
-.skill-content-wrapper {
-    display: flex;
-    justify-content: space-around;
-}
-
-.soft-skill {
-    display: flex;
-    flex-direction: column;
+.card-skill-wrapper {
     gap: 30px;
-}
-
-.tech-skill {
     display: flex;
-    flex-direction: column;
-    gap: 30px;
+    width: max-content;
+    margin-top: 50px;
 }
 
 .programing-language {
     display: flex;
     flex-direction: column;
+    justify-content: center;
     gap: 30px;
 }

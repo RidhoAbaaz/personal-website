@@ -1,6 +1,6 @@
 // import CertificationCard from '../components/Card/CertificationCard'
 import { useContext } from 'react'
-import TechCard from '../components/Card/TechCard'
+import TechCard from '../components/Card/Tech/TechCard'
 import Title from '../components/Title/Title'
 import './PortofolioPage.css'
 import { NavigationContext } from '../contexts/NavigationContext'

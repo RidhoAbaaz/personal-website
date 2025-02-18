@@ -1,4 +1,4 @@
-import Button from '../Button/Button'
+import Button from '../../Button/Button'
 import './ProjectCard.css'
 
 export default function ProjectCard({ image, tittle, description }) {

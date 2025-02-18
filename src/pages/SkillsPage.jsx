@@ -1,39 +1,37 @@
 import Title from "../components/Title/Title";
 import './SkillsPage.css'
-import Skill from "../components/Skill/Skill";
+// import Skill from "../components/Skill/Skill";
 import { useContext } from "react";
 import { NavigationContext } from "../contexts/NavigationContext";
+import SkillCard from "../components/Card/Skill/SkillCard";
+import TitleCard from "../components/Card/Skill/TitleCard";
 
 export default function SkillsPage() {
     const { skill } = useContext(NavigationContext);
     return (
         <section className="skillpage" ref={skill}>
-            <div className="skills-wrapper">
-                <Title text="My Skills" width="162px"/>
-                <p>FROM MY JOURNEY AS INFORMATICS STUDENT I HAVE KIND OF SKILLS</p>
-                <div className="skill-content-wrapper">
-                    <div className="soft-skill">
-                        <h5 className="skill-title">Soft Skill</h5>
-                        <Skill text="Critical Thinking" />
-                        <Skill text="Problem Solving" />
-                        <Skill text="Project Management" />
-                        <Skill text="Time Management" />
-                    </div>
-                    <div className="tech-skill">
-                        <h5 className="skill-title">Tech Skill</h5>
-                        <Skill text="Backend Developer" />
-                        <Skill text="Cloud Engineer" />
-                        <Skill text="Frontend Developer" />
-                    </div>
-                    <div className="programing-language">
-                        <h5 className="skill-title">Programing Language</h5>
-                        <Skill text="HTML" />
-                        <Skill text="CSS" />
-                        <Skill text="Javascript" />
-                        <Skill text="React" />
-                    </div>
-                </div>
+            <Title text="My Skills" width="162px"/>
+            <p>From my journey as an Informatics student, I have gained various skills</p>
+            <div className="card-skill-wrapper">
+                <SkillCard icon="bi bi-braces" title="Front-End Developer" text="Crafting responsive, interactive, and user-friendly web experiences using modern frontend technologies">
+                    <TitleCard text="HTML"/>
+                    <TitleCard text="CSS"/>
+                    <TitleCard text="Javascript"/>
+                    <TitleCard text="React"/>
+                </SkillCard>
+                <SkillCard icon="bi bi-database" title="Back-End Developer" text="Developing backend solutions focused on creating reliable, flexible, and scalable server environments for seamless web application performance">
+                    <TitleCard text="Javascript"/>
+                    <TitleCard text="Python"/>
+                    <TitleCard text="Node.js"/>
+                    <TitleCard text="Prisma"/>
+                    <TitleCard text="Google Cloud Services"/>
+                    <TitleCard text="Hapi.js"/>
+                    <TitleCard text="MySQL"/>
+                </SkillCard>
+                <SkillCard icon="bi bi-cloud" title="Cloud Engineer" text="Designing cloud architectures, configuring cloud environments, and deploying applications to ensure scalability and reliability">
+                    <TitleCard text="Google Cloud Platform"/>
+                </SkillCard>
             </div>
-        </section>
+    </section>
     )
 }

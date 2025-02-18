@@ -5,7 +5,7 @@
 }
 
 .navbar-list a {
-    cursor: default;
+    cursor: pointer;
     display: inline-block;
     text-decoration: none;
     text-align: center;

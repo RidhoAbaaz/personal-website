@@ -1,6 +1,6 @@
 import { useContext } from 'react'
 import Button from '../components/Button/Button'
-import ContactCard from '../components/Card/ContactCard'
+import ContactCard from '../components/Card/Contact/ContactCard'
 import Title from '../components/Title/Title'
 import './ContactPage.css'
 import { NavigationContext } from '../contexts/NavigationContext'

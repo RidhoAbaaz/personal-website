@@ -1,0 +1,9 @@
+.titleCard {
+    border: 2px solid white;
+    width: max-content;
+    padding: 5px;
+}
+
+.titleCard p {
+    font-size: 10px;
+}
