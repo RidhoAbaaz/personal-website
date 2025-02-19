@@ -5,13 +5,13 @@ import './HomePage.css'
 import { NavigationContext } from "../contexts/NavigationContext";
 
 export default function HomePage() {
-    const { home, about, skill, portofolio, contact } = useContext(NavigationContext);
+    const { home, portofolio, contact } = useContext(NavigationContext);
 
     return (
         <section className="homepage" ref={home}>
             <div className="wrapper-1">
                 <h5 className="logo">RIDHO</h5>
-                <Navbar homePage={home} aboutPage={about} skillPage={skill} portofolioPage={portofolio} contactPage={contact}/>
+                <Navbar />
             </div>
             <div className="wrapper-2">
                 <div className="text-wrapper">

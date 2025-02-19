@@ -1,17 +1,19 @@
+import { useContext } from 'react';
 import './Navbar.css'
+import { NavigationContext } from '../../contexts/NavigationContext';
 
-export default function Navbar({ homePage, aboutPage, skillPage, portofolioPage, contactPage }) {
-
+export default function Navbar() {
+    const { home, about, skill, portofolio, contact } = useContext(NavigationContext)
     const handleCLick = (page) => page.current.scrollIntoView({ behavior: "smooth" });
 
     return (
         <nav>
             <ul className="navbar-list">
-                <li><a onClick={() => handleCLick(homePage)}>Home</a></li>
-                <li><a onClick={() => handleCLick(aboutPage)}>About Me</a></li>
-                <li><a onClick={() => handleCLick(skillPage)}>Skills</a></li>
-                <li><a onClick={() => handleCLick(portofolioPage)}>Portofolio</a></li>
-                <li><a onClick={() => handleCLick(contactPage)}>Contact</a></li>
+                <li><a onClick={() => handleCLick(home)}>Home</a></li>
+                <li><a onClick={() => handleCLick(about)}>About Me</a></li>
+                <li><a onClick={() => handleCLick(skill)}>Skills</a></li>
+                <li><a onClick={() => handleCLick(portofolio)}>Portofolio</a></li>
+                <li><a onClick={() => handleCLick(contact)}>Contact</a></li>
             </ul>
         </nav>
     )

@@ -6,7 +6,7 @@ import Button from "../components/Button/Button";
 import AboutCard from "../components/Card/About/AboutCard";
 
 export default function AboutPage() {
-    const { about, portofolio } = useContext(NavigationContext);
+    const { about } = useContext(NavigationContext);
 
     return (
         <section className="aboutpage" ref={about}>
@@ -21,9 +21,9 @@ export default function AboutPage() {
                 </div>
             </div>
             <div className="about-card">
-                <AboutCard title="Projects" number="2" icon="bi bi-gear" ref={portofolio}/>
-                <AboutCard title="Certifications" number="30" icon="bi bi-trophy" ref={portofolio}/>
-                <AboutCard title="Tech Stack" number="5" icon="bi bi-stack" ref={portofolio}/>
+                <AboutCard title="Projects" number="2" icon="bi bi-gear" project={true} />
+                <AboutCard title="Certifications" number="30" icon="bi bi-trophy" certification={true}/>
+                <AboutCard title="Tech Stack" number="7" icon="bi bi-stack" stack={true}/>
             </div>
         </section>
     )

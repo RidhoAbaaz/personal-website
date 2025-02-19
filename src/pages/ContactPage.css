@@ -1,8 +1,7 @@
 .contactpage {
     background-color: #092635;
-    border: 2px solid white;
     height: 100vh;
-    padding: 100px 150px 0 150px;
+    padding: 50px 150px 0 150px;
     display: flex;
     flex-direction: column;
     gap: 20px;

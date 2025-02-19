@@ -1,4 +1,4 @@
-import { useRef } from "react";
+import { useRef, useState } from "react";
 import { NavigationContext } from "../contexts/NavigationContext";
 import AboutPage from "./AboutPage";
 import SkillsPage from "./SkillsPage";
@@ -13,8 +13,12 @@ export default function PersonalWebsite () {
     const portofolio = useRef(null);
     const contact = useRef(null);
 
+    const [projects, setProjects] = useState(true);
+    const [certification, setCertification] = useState(false);
+    const [stack, setStack] = useState(false);
+
     return (
-        <NavigationContext.Provider value={{ home, about, skill, portofolio, contact }}>
+        <NavigationContext.Provider value={{ home, about, skill, portofolio, contact, projects, certification, stack, setProjects, setCertification, setStack }}>
             <HomePage />
             <AboutPage />
             <SkillsPage />
