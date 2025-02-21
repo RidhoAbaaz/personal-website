@@ -1,4 +1,4 @@
-import { useContext, useRef } from 'react'
+import { useContext } from 'react'
 import TechCard from '../components/Card/Tech/TechCard'
 import Title from '../components/Title/Title'
 import './PortofolioPage.css'
@@ -7,8 +7,7 @@ import ProjectCard from '../components/Card/Project/ProjectCard'
 import TitleCard from '../components/Card/Skill/TitleCard'
 
 export default function PortofolioPage() {
-    const { portofolio, projects, certification, stack, setProjects, setCertification, setStack } = useContext(NavigationContext);
-    const buttonRef = useRef([]);
+    const { portofolio, projects, certification, stack, setProjects, setCertification, setStack, buttonRef } = useContext(NavigationContext);
     const buttonType = ["projects", "certification", "stack"];
     let component;
 
@@ -83,11 +82,9 @@ export default function PortofolioPage() {
             <div className="buttonWrap">
                 {
                     buttonType.map((el, index) => {
-                        console.log(index);
-                        console.log(el);
                         return (
                             <button key={el} ref={(el) => (buttonRef.current[index] = el)} onClick={() => handleClick(index, el)}>
-                                <i className={`bi bi-${el === "project" ? "gear" : el === "certification" ? "trophy" : "stack"}`}></i>
+                                <i className={`bi bi-${el === "projects" ? "gear" : el === "certification" ? "trophy" : "stack"}`}></i>
                                 <p>{el}</p>
                             </button>
                         )

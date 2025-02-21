@@ -11,6 +11,7 @@
 }
 
 .card-project-wrapper a {
+    margin-top: 10px;
     width: max-content;
     cursor: pointer;
     font-size: 10px;

@@ -12,13 +12,14 @@ export default function PersonalWebsite () {
     const skill = useRef(null);
     const portofolio = useRef(null);
     const contact = useRef(null);
+    const buttonRef = useRef(["projects"]);
 
     const [projects, setProjects] = useState(true);
     const [certification, setCertification] = useState(false);
     const [stack, setStack] = useState(false);
 
     return (
-        <NavigationContext.Provider value={{ home, about, skill, portofolio, contact, projects, certification, stack, setProjects, setCertification, setStack }}>
+        <NavigationContext.Provider value={{ home, about, skill, portofolio, contact, projects, certification, stack, setProjects, setCertification, setStack, buttonRef }}>
             <HomePage />
             <AboutPage />
             <SkillsPage />

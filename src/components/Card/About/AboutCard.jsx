@@ -2,14 +2,18 @@ import { useContext } from 'react';
 import './AboutCard.css'
 import { NavigationContext } from '../../../contexts/NavigationContext';
 
-export default function AboutCard({ number, title, icon, stack, certification, project }) {
-    const { portofolio, setProjects, setCertification, setStack } = useContext(NavigationContext);
+export default function AboutCard({ number, title, icon, stack, certification, project, index }) {
+    const { portofolio, setProjects, setCertification, setStack, buttonRef } = useContext(NavigationContext);
 
     const handleCLick = (page) => {
         page.current.scrollIntoView({ behavior: "smooth" });
         setProjects(project);
         setCertification(certification);
         setStack(stack);
+
+        buttonRef.current.forEach((btn, idx) => {
+            if (btn) btn.style.background = idx === index ? "rgba(255, 255, 255, 0.5)" : "transparent";
+        });
     }
 
     return (

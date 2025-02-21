@@ -7,6 +7,7 @@ import { NavigationContext } from '../contexts/NavigationContext'
 
 export default function ContactPage() {
     const { contact } = useContext(NavigationContext);
+
     return (
         <section className='contactpage' ref={contact}>
             <Title text="Get In Touch" width="223px"/>
@@ -26,7 +27,7 @@ export default function ContactPage() {
                             </ContactCard>
                         </div>
                     </div>
-                    <form className='form'>
+                    <form className='form' action="https://formspree.io/f/xjkgldao" method='post'>
                         <h3>Email Me</h3>
                         <input type="email" name="email" id="email" placeholder='Email' autoComplete='off'/>
                         <input type='text' name="subject" id="subject" placeholder='Subject' autoComplete='off'/>

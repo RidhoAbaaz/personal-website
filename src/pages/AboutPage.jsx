@@ -21,9 +21,9 @@ export default function AboutPage() {
                 </div>
             </div>
             <div className="about-card">
-                <AboutCard title="Projects" number="2" icon="bi bi-gear" project={true} />
-                <AboutCard title="Certifications" number="30" icon="bi bi-trophy" certification={true}/>
-                <AboutCard title="Tech Stack" number="7" icon="bi bi-stack" stack={true}/>
+                <AboutCard title="Projects" number="2" icon="bi bi-gear" project={true} index={0} />
+                <AboutCard title="Certifications" number="30" icon="bi bi-trophy" certification={true} index={1} />
+                <AboutCard title="Tech Stack" number="7" icon="bi bi-stack" stack={true} index={2} />
             </div>
         </section>
     )
