@@ -1,4 +1,3 @@
-// import CertificationCard from '../components/Card/CertificationCard'
 import { useContext, useRef } from 'react'
 import TechCard from '../components/Card/Tech/TechCard'
 import Title from '../components/Title/Title'
@@ -9,13 +8,24 @@ import TitleCard from '../components/Card/Skill/TitleCard'
 
 export default function PortofolioPage() {
     const { portofolio, projects, certification, stack, setProjects, setCertification, setStack } = useContext(NavigationContext);
-    const ref = useRef(null);
+    const buttonRef = useRef([]);
+    const buttonType = ["projects", "certification", "stack"];
     let component;
 
 
+    const handleClick = (index, type) => {
+        setProjects(type === "projects");
+        setCertification(type === "certification");
+        setStack(type === "stack");
+
+        buttonRef.current.forEach((btn, idx) => {
+            if (btn) btn.style.background = idx === index ? "rgba(255, 255, 255, 0.5)" : "transparent";
+        });
+    };
+
     if (projects) {
         component = (
-            <div className='componentView' ref={ref}>
+            <div className='componentView'>
                 <ProjectCard image="/images/travelmate.png" tittle="Travel Mate" description="Travel Mate is an application designed to provide travel destination recommendations in Indonesia based on user preferences" link="https://github.com/RidhoAbaaz/travelmate">
                     <TitleCard text="Javascript"/>
                     <TitleCard text="Kotlin"/>
@@ -23,6 +33,8 @@ export default function PortofolioPage() {
                     <TitleCard text="Node.js"/>
                     <TitleCard text="Google Cloud Services"/>
                     <TitleCard text="Hapi.js"/>
+                    <TitleCard text="Tensorflow"/>
+                    <TitleCard text="Google Collab"/>
                 </ProjectCard>
                 <ProjectCard image="/images/zoopedia.png" tittle="zoopedia" description="Zoopedia is a simple, child-friendly app that provides an engaging animal encyclopedia with a colorful and easy-to-use design" link="https://github.com/RidhoAbaaz/kelompok-6-front-end">
                     <TitleCard text="PHP"/>
@@ -33,10 +45,11 @@ export default function PortofolioPage() {
                 </ProjectCard>
             </div>
         )
-    } 
+    }
+
     if (certification) {
         component = (
-            <div className='certificationView' ref={ref}>
+            <div className='certificationView'>
                 <div className="certificationWrap">
                     <img src="/images/certi-1.png" alt="certification" />
                     <img src="/images/certi-2.png" alt="certification" />
@@ -47,9 +60,10 @@ export default function PortofolioPage() {
             </div>
         )
     }
+
     if (stack) {
         component = (
-            <div className='techView' ref={ref}>
+            <div className='techView'>
                 <TechCard image="/images/html.png" />
                 <TechCard image="/images/css.png" />
                 <TechCard image="/images/js.png" />
@@ -67,30 +81,18 @@ export default function PortofolioPage() {
         <div className="portofoliopage" ref={portofolio}>
             <Title text="Portofolio" width="180px" />
             <div className="buttonWrap">
-                <button onClick={ () => { 
-                    setProjects(true);
-                    setCertification(false);
-                    setStack(false);
-                }}>
-                    <i className="bi bi-gear"></i>
-                    <p>Projects</p>
-                </button>
-                <button onClick={ () => {
-                    setProjects(false);
-                    setCertification(true);
-                    setStack(false); 
-                }}>
-                    <i className="bi bi-trophy"></i>
-                    <p>Certification</p>
-                </button>
-                <button onClick={ () => {
-                    setProjects(false);
-                    setCertification(false);
-                    setStack(true);
-                }}>
-                    <i className="bi bi-stack"></i>
-                    <p>Tech Stack</p>
-                </button>
+                {
+                    buttonType.map((el, index) => {
+                        console.log(index);
+                        console.log(el);
+                        return (
+                            <button key={el} ref={(el) => (buttonRef.current[index] = el)} onClick={() => handleClick(index, el)}>
+                                <i className={`bi bi-${el === "project" ? "gear" : el === "certification" ? "trophy" : "stack"}`}></i>
+                                <p>{el}</p>
+                            </button>
+                        )
+                    })
+                }
             </div>
             {component}
         </div>
