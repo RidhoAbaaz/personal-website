@@ -12,7 +12,7 @@ export default function PersonalWebsite () {
     const skill = useRef(null);
     const portofolio = useRef(null);
     const contact = useRef(null);
-    const buttonRef = useRef(["projects"]);
+    const buttonRef = useRef([]);
 
     const [projects, setProjects] = useState(true);
     const [certification, setCertification] = useState(false);

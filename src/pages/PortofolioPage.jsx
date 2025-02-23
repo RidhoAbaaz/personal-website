@@ -1,4 +1,4 @@
-import { useContext } from 'react'
+import { useContext, useEffect } from 'react'
 import TechCard from '../components/Card/Tech/TechCard'
 import Title from '../components/Title/Title'
 import './PortofolioPage.css'
@@ -11,7 +11,6 @@ export default function PortofolioPage() {
     const buttonType = ["projects", "certification", "stack"];
     let component;
 
-
     const handleClick = (index, type) => {
         setProjects(type === "projects");
         setCertification(type === "certification");
@@ -21,6 +20,12 @@ export default function PortofolioPage() {
             if (btn) btn.style.background = idx === index ? "rgba(255, 255, 255, 0.5)" : "transparent";
         });
     };
+
+    useEffect(() => {
+        if (buttonRef.current[0]) {
+            buttonRef.current[0].style.background = "rgba(255, 255, 255, 0.5)";
+        }
+    }, []);
 
     if (projects) {
         component = (
@@ -81,14 +86,13 @@ export default function PortofolioPage() {
             <Title text="Portofolio" width="180px" />
             <div className="buttonWrap">
                 {
-                    buttonType.map((el, index) => {
-                        return (
+                    buttonType.map((el, index) => (
                             <button key={el} ref={(el) => (buttonRef.current[index] = el)} onClick={() => handleClick(index, el)}>
                                 <i className={`bi bi-${el === "projects" ? "gear" : el === "certification" ? "trophy" : "stack"}`}></i>
                                 <p>{el}</p>
                             </button>
                         )
-                    })
+                    )
                 }
             </div>
             {component}
