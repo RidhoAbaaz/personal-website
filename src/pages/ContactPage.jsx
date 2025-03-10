@@ -12,6 +12,7 @@ export default function ContactPage() {
     const { contact } = useContext(NavigationContext);
     const [loading, setLoading] = useState(false);
     const show = useRef(null);
+    const innerText = useRef(null)
     const [ form, setForm ] = useImmer({
         email: "",
         subject: "",
@@ -58,7 +59,8 @@ export default function ContactPage() {
                     draft.email = "";
                     draft.subject = "";
                     draft.message = "";
-                })
+                });
+                innerText.current.innerHTML = "Thank You for sharing oportunity with me"
             }
         })
         .catch(error => {
@@ -89,6 +91,7 @@ export default function ContactPage() {
                     </div>
                     <div className='formWrapper'>
                         { loading && <Loading/> }
+                        <p ref={innerText} className='innerText'></p>
                         <form className='form' onSubmit={handleClick} ref={show}>
                             <h3>Email Me</h3>
                             <input type="email" name="email" id="email" placeholder='Email' autoComplete='off' onChange={handleChange} value={form.email}/>

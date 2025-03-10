@@ -21,6 +21,11 @@
     padding: 15px;
     border-radius: 10px;
     height: 100%;
+    width: 45%;
+}
+
+.innerText {
+    font-size: 22px;
 }
 
 .form {
