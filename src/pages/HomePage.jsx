@@ -10,7 +10,7 @@ export default function HomePage() {
     return (
         <section className="homepage" ref={home}>
             <div className="wrapper-1">
-                <h5 className="logo">RIDHO</h5>
+                <h5 className="logo">PERSONAL WEBSITE</h5>
                 <Navbar />
             </div>
             <div className="wrapper-2">

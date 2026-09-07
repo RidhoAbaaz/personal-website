@@ -20,3 +20,20 @@
     color: #5C8374;
     font-size: 20px;
 }
+
+@media only screen and (max-width: 600px) {
+    .navbar-list {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        gap: 5px;
+    }
+
+    .navbar-list a {
+        font-size: 15px;
+    }
+
+    .navbar-list a:hover {
+    color: #5C8374;
+    font-size: 18px;
+}
+}

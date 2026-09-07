@@ -1,8 +1,8 @@
 .card-project-wrapper {
     padding: 30px 30px 30px 70px;
     display: flex;
-    width: 40%;
-    height: 100%;
+    width: 500px;
+    height: 420px;
     background: rgba(255, 255, 255, 0.1); /* Warna semi-transparan */
     border-radius: 10px;
     gap: 10px;
