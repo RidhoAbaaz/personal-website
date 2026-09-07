@@ -16,7 +16,7 @@ export default function HomePage() {
             <div className="wrapper-2">
                 <div className="text-wrapper">
                     <p className="name-info">I am Ridho Abdul Aziz</p>
-                    <p className="job-info">Informatic Student</p>
+                    <p className="job-info">Informatic Graduate</p>
                     <div className="button-wrap">
                         <Button text="Contact Me" page={contact}>
                             <i className="bi bi-person-lines-fill"></i>
